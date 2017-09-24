@@ -1,10 +1,7 @@
-/*
-Adafruit Arduino - Lesson 4. 8 LEDs and a Shift Register
-*/
- 
-int latchPin = 10;
 int clockPin = 11;
 int dataPin = 12;
+int latchPin = 13;
+
  
 byte leds = 0;
  

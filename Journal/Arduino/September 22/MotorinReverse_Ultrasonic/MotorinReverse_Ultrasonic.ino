@@ -1,3 +1,7 @@
+int enablePin = 9;
+int in1Pin = 10;
+int in2Pin = 3;
+int switchPin = 7;
 const int trigPin = 5;
 const int echoPin = 6;
 long duration;
@@ -32,6 +36,10 @@ void setup()
 
 void loop()
 {
+  pinMode(in1Pin, OUTPUT);
+  pinMode(in2Pin, OUTPUT);
+  pinMode(enablePin, OUTPUT);
+  pinMode(switchPin, INPUT_PULLUP);
   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin, HIGH);
@@ -40,12 +48,12 @@ void loop()
   duration = pulseIn(echoPin, HIGH);
   distance = duration * 0.034 / 2; //translates time between send and recieve to distance in cm
 
-  if ((distance<200) && (distance>0))
+  if ((distance < 200) && (distance > 0))
   {
-  total = total - readings[readIndex]; //at any specified point in the array, the old value from that spot is subtracted from the sum
-  readings[readIndex] = distance; //a new value reading is placed in that same position
-  total = total + readings[readIndex]; //the new reading is added into the sum
-  readIndex = readIndex + 1; //move to the next position
+    total = total - readings[readIndex]; //at any specified point in the array, the old value from that spot is subtracted from the sum
+    readings[readIndex] = distance; //a new value reading is placed in that same position
+    total = total + readings[readIndex]; //the new reading is added into the sum
+    readIndex = readIndex + 1; //move to the next position
   }
 
   if (readIndex >= numReadings)
@@ -55,12 +63,21 @@ void loop()
 
   average = total / numReadings; //takes sum of #s in array divided by # of positions
   outputBytes(); // will print the value of the average in binary on leds using shift register
+  boolean reverse = digitalRead(switchPin); //when switch is pressed, TRUE
+  int  motorSpeed = 50 + average * 2; // motor speed increases proportionally to feedout from ultrasonic
+  if (motorSpeed >= 255)
+  {
+    motorSpeed = 255; //motor maxes out at 255
+  }
+  setMotor(motorSpeed, reverse);
   Serial.print("Distance: ");
   Serial.print(distance);
   Serial.print("    Average: ");
-  Serial.println(average);
-
+  Serial.print(average);
+  Serial.print("  Motor Speed: ");
+  Serial.println(motorSpeed);
   delay(50);  // slows down reading enough that binary can be read
+
 }
 void outputBytes()
 {
@@ -68,6 +85,11 @@ void outputBytes()
   shiftOut(dataPin, clockPin, LSBFIRST, average);
   digitalWrite(latchPin, HIGH);
   delay(10);
-
+}
+void setMotor(int motorSpeed, boolean reverse)
+{
+  analogWrite(enablePin, motorSpeed);
+  digitalWrite(in1Pin, ! reverse); //flips the ground and power going to motor so flips direction
+  digitalWrite(in2Pin, reverse);
 }
 

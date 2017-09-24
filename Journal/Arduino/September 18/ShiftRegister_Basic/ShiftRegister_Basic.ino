@@ -1,9 +1,8 @@
-//Pin connected to ST_CP of 74HC595
-int dataPin = 12;
-//Pin connected to SH_CP of 74HC595
+
 int clockPin = 11;
-////Pin connected to DS of 74HC595
-int latchPin = 10;
+int dataPin = 12;
+int latchPin = 13;
+
 
 void setup() {
   //set pins to output because they are addressed in the main loop

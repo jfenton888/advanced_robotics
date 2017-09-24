@@ -10,9 +10,10 @@ int readIndex = 0;              // the index of the current reading
 int total = 0;                  // the running total
 int average = 0;                // the average
 
-int latchPin = 10;
 int clockPin = 11;
 int dataPin = 12;
+int latchPin = 13;
+
 
 void setup()
 {

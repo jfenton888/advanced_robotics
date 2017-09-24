@@ -1,8 +1,10 @@
 int brightness = 25; //adjustable based on brightness of surroundings
 int lightPin = 0;
-int latchPin = 10;
+
 int clockPin = 11;
 int dataPin = 12;
+int latchPin = 13;
+
 int motorPin = 3;
  
 int leds = 0;

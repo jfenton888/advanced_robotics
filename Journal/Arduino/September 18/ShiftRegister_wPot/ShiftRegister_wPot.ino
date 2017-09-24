@@ -3,9 +3,11 @@ Adafruit Arduino - Lesson 8. Analog Inputs - LEDs
 */
  
 int potPin = 0;
-int latchPin = 10;
+
 int clockPin = 11;
 int dataPin = 12;
+int latchPin = 13;
+
  
 int leds = 0;
  
