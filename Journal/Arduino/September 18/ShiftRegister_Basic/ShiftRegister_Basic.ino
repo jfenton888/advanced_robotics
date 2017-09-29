@@ -67,7 +67,7 @@ void outputBytes(){
       shiftOut(dataPin, clockPin, MSBFIRST, dataValues);
       digitalWrite(latchPin, HIGH);  
       dataValues = dataValues << 1; // Shift the bits one place to the left -  change to >> to adjust direction
-      delay(100);    
+      delay(1000);    
     }
  
 }

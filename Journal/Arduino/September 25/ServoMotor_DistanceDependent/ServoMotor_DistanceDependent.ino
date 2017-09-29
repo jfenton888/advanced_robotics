@@ -65,8 +65,8 @@ void loop()
   Serial.print(distance);
   Serial.print("    Average: ");
   Serial.println(average);
-  int angle = average - 20;              // 0 to 180-ish
-  servo.write(angle);
+  int angle = average - 20;  //gives servo motor an angle measure of -20 to 180
+  servo.write(angle); //should put motor position equivelant to int angle
 
   delay(50);  // slows down reading enough that binary can be read
 }
@@ -78,4 +78,3 @@ void outputBytes()
   delay(10);
 
 }
-
