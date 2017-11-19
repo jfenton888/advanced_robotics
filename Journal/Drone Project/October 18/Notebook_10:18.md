@@ -4,6 +4,8 @@
 * Task
 	* Working with Fusion
 		* learnig how to draw shapes and make them into 3 dimensional versions
+		* Improve the first model I made on Fusion
+		* pretty much involved starting it again from scratch and making a more direct pattern, as a lot from the original was not actually doing anything
 * Summary
 	* This is not an easy thing to learn. I have a very clear picture in my head of what I want it to look like but I dont know how to turn that into a reality.
 	* I want 6 arms, each attached to the vertical strut of the hexagon, but its so hard to get all the measurements perfect

@@ -10,3 +10,4 @@
 	* Turns out it is not something you can pickup on the first day so I will have to learn this new program 
 * Looking Forward
 	* Learning Fusion's ins and outs and then trying to get Eclipse up and running on my computer
+	* Designed the first version of the frame, deginately not to scale or a very direct way of doing it but it was good to get a real visual

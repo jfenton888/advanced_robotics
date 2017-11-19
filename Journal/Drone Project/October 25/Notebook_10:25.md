@@ -14,7 +14,8 @@
 * Issues
 	* It took all class because of how many things were wrong
 * Next task
-	* Trying my 6th completely new itteration of the frame
+	* Trying my 4th completely new itteration of the frame
+	* The new version will have a mount for the circuitboard in the center, need to decide on what it will be
 
 * Pictures and Videos
 	* 
