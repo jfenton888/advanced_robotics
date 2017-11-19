@@ -1,8 +1,6 @@
 # advanced_robotics 10/13/2017
 
 
-* Duration
-	* 21:00-00:30 and 16:00-20:00
 * Task
 	* Picking a project 
 		* We're now getting into our big projects for the class and have to pick one and pitch it/get approval before we begin the process on monday

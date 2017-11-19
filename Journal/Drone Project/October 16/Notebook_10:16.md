@@ -2,7 +2,7 @@
 
 
 * Task
-	* Getting started on the project when not reviewing the steps we will be takig with D
+	* Getting started
 * Summary
 	* My gant chart's progression was a fairly simple task- two seperate tasks that can happen nearly concurrently–––> Creating a frame and Writing the code
 	* Talked with Charlie about what my best option is for creating the frame, going to be using Fusion instead of sketchup
