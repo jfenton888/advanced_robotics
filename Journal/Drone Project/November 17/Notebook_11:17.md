@@ -5,6 +5,11 @@
 	* Finish
 * Summary
 	* I spent all night working on it and made a new motor deck and re made everything related to the motors to try to get them taking a pin out
+	* I took multiple approaches to ry to get the motors defined within my code
+		* One way was by not even calling them motors and running them as standerd pwm outputs but that proved unsuccessful
+		* I also tried to take what the crazyflie already had for motors and coppy it, making another set of files with a different name for everywhere motors were called on, but this proved impossible 
+		* I finally added onto their preexisting code for the motors and defined more motors within that framework(my worry being that it would screw with the other motors if I did but it was the only option)
+	* I then had to find out what to call the PWM ports in the code because none of the code I found, either in their preexisting code or other people's, called the ports the same names as are on the expansion deck so I had to go into their hardware specs to match the names. 
 	* Motors in the code need to be defined with many different aspects that help define what they are, not something that wa easy to write for
 
 >		* static const MotorPerifDef CONN_M5 ={
